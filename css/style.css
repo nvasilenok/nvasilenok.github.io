@@ -64,6 +64,11 @@ nav {
   	background-color: #212121;
 }
 
+a {
+	font-size: 110%;
+	color: #3b441d;
+}
+
 nav a {
 	display: inline-block;
 	float: left;
@@ -90,8 +95,6 @@ nav a:hover {
 
 
 .email {
-	font-size: 110%;
-	color: #3b441d;
 	text-align: center;
 	text-decoration: none;
 }
@@ -166,11 +169,6 @@ div {
 	width: 68%;
 	/* display: table-cell; */
 }
-
-div.conspects {
-	
-}
-
 
 p {
 	font-size: 110%;
