@@ -1,0 +1,195 @@
+/* * {
+	border: solid 1px;
+}  */
+
+body, h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #212121;
+	font-weight: lighter;
+}
+
+h1 {
+	color: white;
+	font-size: 400%;
+	font-weight:lighter;
+	text-align: center;
+	/* upper cases */
+	/* font-variant: small-caps; */
+}
+
+h2 {
+	color: gray;
+	font-size: 200%;
+	text-align: center;
+	font-weight: lighter;
+	margin-top: 1.5%;
+	margin-bottom: 2%;
+	/* upper cases */
+	/* font-variant: small-caps; */
+}
+
+h3 {
+	font-size: 170%;
+	text-align: left;
+	color: gray;
+	font-weight: lighter;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+
+h4 {
+	font-size: 115%;
+	text-align: left;
+	color: #212121;
+	margin-top: 3%;
+	margin-bottom: 0.5%;
+}
+
+span.h4 {
+	font-weight: lighter;
+}
+
+nav {
+	font-family: Courier;
+	font-size: 110%;
+	position: fixed;
+ 	top: 0;
+  	width: 100%;
+  	background-color: #212121;
+}
+
+nav a {
+	display: inline-block;
+	float: left;
+  	color: white;
+  	text-align: center;
+  	padding: 10px 16px;
+  	text-decoration: none;
+
+}
+
+/* changes color */
+nav a:hover {
+  background-color: #111;
+}
+
+#lan {
+	float: right;
+	font-variant: small-caps; 
+}
+
+#current {
+	background-color: #64563c;
+}
+
+
+.email {
+	font-size: 110%;
+	color: #3b441d;
+	text-align: center;
+	text-decoration: none;
+}
+
+div.email {
+ margin: 0 auto;
+}
+
+a.email:hover {
+  color: #7b6752;
+}
+
+.icons {
+	color: #3b441d;
+	text-align: center;
+	text-decoration: none;
+}
+
+a.icons:hover {
+  color: #7b6752;
+}
+
+#header {
+	background: url("../images/bg-prado.jpg");
+	background-size: cover;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 100px 0px;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+#main-content, footer {
+	width: 70%;
+	margin: 0 auto;
+	padding: 10px 0px;
+}
+
+div {
+	/* border: solid 1px; */
+	display: block;
+}
+
+
+#subheader {
+	border-bottom: 1px solid #dedcdc;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.cols {
+	display: table;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#left-col {
+	display: table-cell;
+	vertical-align: top;
+	width: 30%;
+	/* display: table-cell; */
+}
+
+#photo {
+	width: 80%;
+}
+
+#right-col {
+	display: table-cell;
+	vertical-align: top;
+	width: 68%;
+	/* display: table-cell; */
+}
+
+div.conspects {
+	
+}
+
+
+p {
+	font-size: 110%;
+	line-height: 120%;
+	text-align: justify;
+	margin-top: 0;
+	margin-bottom: 15px;
+	vertical-align: top;
+}
+
+footer {
+	border-top: 1px solid #dedcdc;
+	font-size: 80%;
+	clear: both;
+	margin-bottom: 2%;
+}
+
+div.footer {
+	margin-top: 3px;
+	display: block;
+	text-align: center;
+}
