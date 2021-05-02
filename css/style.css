@@ -65,7 +65,7 @@ nav {
 }
 
 a {
-	font-size: 110%;
+	font-size: 100%;
 	color: #3b441d;
 }
 
@@ -78,6 +78,7 @@ a:hover {
 nav a {
 	display: inline-block;
 	float: left;
+	font-size: 110%;
   	color: white;
   	text-align: center;
   	padding: 10px 16px;
@@ -132,7 +133,7 @@ a.icons:hover {
 }
 
 #main-content, footer {
-	width: 70%;
+	width: 65%;
 	margin: 0 auto;
 	padding: 10px 0px;
 }
