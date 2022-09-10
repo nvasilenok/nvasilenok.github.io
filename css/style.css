@@ -167,6 +167,10 @@ div {
 	width: 80%;
 }
 
+#preview {
+	width: 90%;
+}
+
 #right-col {
 	display: table-cell;
 	vertical-align: top;
