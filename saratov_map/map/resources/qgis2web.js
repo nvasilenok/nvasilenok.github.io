@@ -360,11 +360,14 @@ map.on("rendercomplete", function(evt) {
         var attributionList = attribution.getElementsByTagName('ul')[0];
         var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
         var qgis2webAttribution = document.createElement('li');
-        qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
+        qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; ';
         var olAttribution = document.createElement('li');
-        olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
+        olAttribution.innerHTML = '<a href="https://openlayers.org/" target="_blank">OpenLayers</a> &middot; ';
         var qgisAttribution = document.createElement('li');
         qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
+        var authorAttribution = document.createElement('li');
+        authorAttribution.innerHTML = '<a href="https://nvasilenok.github.io/" target="_blank">Natalia Vasilenok</a> &middot';
+        attributionList.insertBefore(authorAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
         attributionList.insertBefore(olAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
