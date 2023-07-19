@@ -138,6 +138,12 @@ a.icons:hover {
 	padding: 10px 0px;
 }
 
+footer {
+	width: 50%;
+	margin: 0 auto;
+	padding: 10px 0px;
+}
+
 div {
 	/* border: solid 1px; */
 	display: block;
