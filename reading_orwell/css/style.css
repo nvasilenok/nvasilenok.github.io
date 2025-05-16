@@ -127,18 +127,17 @@ h2 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 275%;
+    font-size: 250%;
     width: 90%;
   }
 
-  h1 {
+  h2 {
     font-size: 125%;
     width: 90%;
   }
 
-
   #category-buttons {
-    width: 80%;
+    width: 50%;
     flex-wrap: wrap;
   }
 
