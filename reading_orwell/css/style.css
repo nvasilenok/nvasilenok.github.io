@@ -59,7 +59,7 @@ h2 {
 }
 
 #entries {
-  width: 55%;
+  width: 60%;
 }
 
 .entry {
@@ -123,4 +123,22 @@ h2 {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 250%;
+    width: 90%;
+  }
+
+
+  #category-buttons {
+    width: 90%;
+    flex-wrap: wrap;
+    margin-right: 5px;
+  }
+
+  #entries {
+    width: 90%;
+  }
 }
