@@ -1,0 +1,126 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: red;
+  margin-bottom: 0px;
+  font-size: 400%;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  width: 65%;
+}
+
+h2 {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 175%;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  width: 65%;
+}
+
+#category-buttons {
+  margin-bottom: 10px;
+  width: 65%;
+  text-align: center;
+}
+
+#category-buttons button {
+  background: none;
+  border: none;
+  color: #A40101;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  margin-right: 20px;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+#category-buttons button:hover {
+  text-decoration: none;
+}
+
+#category-buttons button.active {
+  color: red; /* Chosen button color */
+}
+
+#entries {
+  width: 55%;
+}
+
+.entry {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.entry-type {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  color: #95190C;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.entry-date {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.entry-source {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.source-link {
+  color: #95190C;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+.year-header {
+  font-size: 150%;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: #A40101; /* same as inactive button color */
+  margin: 2rem 0 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.entry-location {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.8rem;
+  color: #959595;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
