@@ -127,15 +127,19 @@ h2 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 250%;
+    font-size: 275%;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 125%;
     width: 90%;
   }
 
 
   #category-buttons {
-    width: 90%;
+    width: 80%;
     flex-wrap: wrap;
-    margin-right: 5px;
   }
 
   #entries {
