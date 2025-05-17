@@ -184,7 +184,7 @@
     "date_parsed": "2023-02-10",
     "public": 1,
     "type": "booksellers",
-    "description": "Text messages sent to customers of Falanster, an independent bookstore in Moscow, mentioning <em>End of Regime</em> by Alexander Baunov were censored by carriers. The messages were delivered only after the book title was removed.",
+    "description": "Text messages sent to customers of Falanster, an independent bookstore in Moscow, mentioning <em>End of Regime</em> by Alexander Baunov, a study of political transitions in Spain, Portugal, and Greece in the late twentieth century, were censored by carriers. The messages were delivered only after the book title was removed.",
     "location": "Moscow",
     "source": "url",
     "url1": "https://meduza.io/en/news/2023/02/10/moscow-bookseller-unable-to-send-customers-sms-about-end-of-regime-alexander-baunov-s-new-book",
@@ -236,6 +236,18 @@
     "location": "",
     "source": "url",
     "url1": "https://minjust.gov.ru/ru/extremist-materials",
+    "url2": "",
+    "url3": ""
+  },
+  {
+    "date": "November 14, 2018",
+    "date_parsed": "2018-11-14",
+    "public": 1,
+    "type": "books",
+    "description": "Customs officers in St. Petersburg opened and seized an Amazon package with the book <em>The Future is History: How Totalitarianism Reclaimed Russia</em> by Masha Gessen, suspecting it might encourage extremism and terrorism. They justified their actions based on the Eurasian Economic Union’s rules, which ban the import of materials “containing information that could harm the political and economic interests of Union members.”",
+    "location": "St. Petersburg",
+    "source": "url",
+    "url1": "https://www.kommersant.ru/doc/3806368",
     "url2": "",
     "url3": ""
   }

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
   color: white;
@@ -46,7 +50,7 @@ h2 {
   margin-right: 20px;
   cursor: pointer;
   padding: 6px 12px;
-  transition: color 0.3s ease;
+  transition: color 1s ease;
   text-decoration: none;
 }
 
@@ -55,13 +59,22 @@ h2 {
 }
 
 #category-buttons button.active {
-  color: red; /* Chosen button color */
+  color: red; 
 }
 
-#entries {
+#content {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
+#entries,
+#about-section {
+  width: 100%;
+}
+
+/* Entry styling */
 .entry {
   background-color: white;
   color: black;
@@ -108,7 +121,7 @@ h2 {
   font-size: 150%;
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
-  color: #A40101; /* same as inactive button color */
+  color: #A40101; 
   margin: 2rem 0 1rem;
   text-align: left;
   width: 100%;
@@ -123,6 +136,17 @@ h2 {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+#about-section {
+  display: none;
+  flex-direction: column;
+  align-items: stretch; 
+}
+
+#about-section .entry {
+  width: 100%;
+  padding: 15px;
 }
 
 @media (max-width: 768px) {
@@ -141,7 +165,7 @@ h2 {
     flex-wrap: wrap;
   }
 
-  #entries {
+  #content {
     width: 90%;
   }
 }

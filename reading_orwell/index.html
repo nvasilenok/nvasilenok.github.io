@@ -16,7 +16,20 @@
   <h1>Reading Orwell in Moscow</h1>
   <h2>Chronicle of Book Censorship in Contemporary Russia</h2>
   <div id="category-buttons"></div>
+  <div id="content">
   <div id="entries"></div>
+  <div id="about-section">
+    <div class="year-header">About</div>
+    <div class="entry">
+      <div class="entry-date">Reading Orwell in Moscow</div>
+      <p>This project seeks to document the timeline of state pressure on the book industry in contemporary Russia. Whereas pre-publication censorship involving official approval of manuscripts has not been openly practised in post-Soviet Russia, the state has crafted other mechanisms to exert post-publication censorship. The most prominent among these is the adoption of repressive laws, such as the anti-LGBT law or the law prohibiting the dissemination of "false information about the conduct of the USSR during World War II," which can be applied to books and publishers. Although the use of these mechanisms had been relatively mild until recently, this appears to have changed significantly beginning in 2025.
+      </p>
+      <p>While Russia has employed multiple strategies to silence alternative opinions in the public sphere, from assigning a foreign agent status to jailing opposition figures and journalists, this study will focus specifically on attempts to control the <em>content</em> and <em>circulation</em> of books. Therefore, the persecution of writers for statements made outside their written works, such as the arrest in absentia of the writer Boris Akunin for publicly condemning the war in Ukraine, will not be included here.
+      </p>
+
+    </div>
+  </div>
+</div>
 
   <script>
     let entries = [];
@@ -28,7 +41,7 @@
         entries = data.filter(entry => entry.public === 1);
         entries.sort((a, b) => new Date(b.date_parsed) - new Date(a.date_parsed));
         const types = Array.from(new Set(entries.map(e => e.type)));
-        renderCategoryButtons(['full timeline', ...types]);
+        renderCategoryButtons(['full timeline', ...types, 'about']);
         displayEntries(currentCategory);
       })
       .catch(error => {
@@ -39,18 +52,33 @@
       function renderCategoryButtons(categories) {
         const container = document.getElementById('category-buttons');
         container.innerHTML = '';
+        
         categories.forEach(cat => {
           const btn = document.createElement('button');
           btn.textContent = cat;
+      
           btn.onclick = () => {
             currentCategory = cat;
-            displayEntries(cat);
+      
+            // Toggle visibility based on whether "about" is selected
+            if (cat === 'about') {
+              document.getElementById('entries').style.display = 'none';
+              document.getElementById('about-section').style.display = 'flex';
+            } else {
+              document.getElementById('about-section').style.display = 'none';
+              document.getElementById('entries').style.display = 'block';
+              displayEntries(cat);
+            }
+      
+            // Update active button styles
             document.querySelectorAll('#category-buttons button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
           };
+      
           if (cat === currentCategory) {
             btn.classList.add('active');
           }
+      
           container.appendChild(btn);
         });
       }
