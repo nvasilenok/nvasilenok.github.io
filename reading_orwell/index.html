@@ -43,6 +43,8 @@
         const types = Array.from(new Set(entries.map(e => e.type)));
         renderCategoryButtons(['full timeline', ...types, 'about']);
         displayEntries(currentCategory);
+
+        document.getElementById('about-section').style.display = 'none';
       })
       .catch(error => {
         document.getElementById('entries').textContent = 'Failed to load entries.';
