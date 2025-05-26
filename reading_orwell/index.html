@@ -22,11 +22,12 @@
     <div class="year-header">About</div>
     <div class="entry">
       <div class="entry-date">Reading Orwell in Moscow</div>
-      <p>This project seeks to document the timeline of state pressure on the book industry in contemporary Russia. Whereas pre-publication censorship involving official approval of manuscripts has not been openly practised in post-Soviet Russia, the state has crafted other mechanisms to exert post-publication censorship. The most prominent among these is the adoption of repressive laws, such as the anti-LGBT law or the law prohibiting the dissemination of "false information about the conduct of the USSR during World War II," which can be applied to books and publishers. Although the use of these mechanisms had been relatively mild until recently, this appears to have changed significantly beginning in 2025.
+      <p>This project aims to document the timeline of state pressure on the book industry in contemporary Russia. Pre-publication censorship involving official approval of manuscripts has not been openly practised in post-Soviet Russia. Nonetheless, the state has crafted other mechanisms to exert post-publication censorship. 
       </p>
-      <p>While Russia has employed multiple strategies to silence alternative opinions in the public sphere, from assigning a foreign agent status to jailing opposition figures and journalists, this study will focus specifically on attempts to control the <em>content</em> and <em>circulation</em> of books. Therefore, the persecution of writers for statements made outside their written works, such as the arrest in absentia of the writer Boris Akunin for publicly condemning the war in Ukraine, will not be included here.
+      <p>The most prominent among these is the adoption of repressive laws, such as <a href="https://www.hrw.org/news/2023/11/30/russia-supreme-court-bans-lgbt-movement-extremist">the anti-LGBT legislation</a> or the law prohibiting the dissemination of "false information about the conduct of the USSR during World War II," both of which can be applied to books and publishers. Although the use of these mechanisms remained relatively mild until recently, this appears to have changed significantly beginning in 2025.
       </p>
-
+      <p>Russia has employed a range of strategies to silence dissenting voices in the public sphere, from assigning <a href = "https://www.hrw.org/news/2022/12/01/russia-new-restrictions-foreign-agents">a foreign agent status</a> to jailing opposition figures and journalists. However, this study will specifically focus on efforts to control the <em>content</em> and <em>circulation</em> of books. Therefore, persecution of writers for statements made outside their written works, such as the arrest in absentia of the writer Boris Akunin for publicly condemning the war in Ukraine, will not be included here.
+      </p>
     </div>
   </div>
 </div>
@@ -109,6 +110,7 @@
     
         const entryDiv = document.createElement('div');
         entryDiv.className = 'entry';
+        entryDiv.id = entry.id;
     
         if (currentCategory === 'full timeline') {
           const typeElem = document.createElement('div');
@@ -173,6 +175,8 @@
       });
 }
   </script>
+
+<footer class="page-footer">© 2025</footer>
 </body>
 </html>
 

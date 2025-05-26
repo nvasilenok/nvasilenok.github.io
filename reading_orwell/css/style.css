@@ -2,9 +2,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: black;
-  color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   margin: 0;
@@ -34,8 +41,17 @@ h2 {
   width: 65%;
 }
 
+a {
+  color: #95190C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #category-buttons {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 65%;
   text-align: center;
 }
@@ -147,6 +163,17 @@ h2 {
 #about-section .entry {
   width: 100%;
   padding: 15px;
+}
+
+.page-footer {
+  color: #757575;
+  font-family: 'Outfit', sans-serif; 
+  font-weight: 300; 
+  font-size: 85%;
+  text-align: center;
+  margin-top: auto;
+  padding: 20px 0;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
