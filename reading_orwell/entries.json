@@ -104,6 +104,19 @@
     "url3": ""
   },
   {
+    "id": "03-27-2025-booksellers",
+    "date": "March 27, 2025",
+    "date_parsed": "2025-03-27",
+    "public": 1,
+    "type": "publishers",
+    "description": "The publisher Individuum was banned from participating in Non/Fiction, a prominent Moscow-based book fair held from April 10 to 13. ",
+    "location": "Moscow",
+    "source": "url",
+    "url1": "https://meduza.io/news/2025/03/27/izdatelstvu-individuum-otkazali-v-uchastii-v-knizhnoy-yarmarke-non-fiction ",
+    "url2": "",
+    "url3": ""
+  },
+  {
     "id": "03-19-2025-booksellers",
     "date": "March 19, 2025",
     "date_parsed": "2025-03-19",
@@ -152,6 +165,32 @@
     "location": "",
     "source": "url",
     "url1": "https://meduza.io/news/2025/01/11/eksmo-snyalo-s-prodazhi-knigu-deti-ireny-o-spasennyh-vo-vremya-vtoroy-mirovoy-voyny-podrostkah-iz-za-frazy-o-prestupleniyah-sovetskih-soldat",
+    "url2": "",
+    "url3": ""
+  },
+  {
+    "id": "12-01-2024-publishers",
+    "date": "December, 2024",
+    "date_parsed": "2024-12-01",
+    "public": 1,
+    "type": "publishers",
+    "description": "The independent publishers Boomkniga and Cherny Kvadrat (Black Square) were banned from participating in Non/Fiction, a prominent Moscow-based book fair held from December 5 to 8. Cherny Kvadrat was banned for exhibiting works by “anti-authoritarian authors”; no reasons were provided to Boomkniga.",
+    "location": "Moscow",
+    "source": "url",
+    "url1": "https://t.me/BlackSquarePublishing/1237",
+    "url2": "https://www.facebook.com/boomkniga/posts/pfbid02NiYS4RfVyL28XRDLduDBZGyWTzfAqSkXM8ypKX3qVdrYnMVhbzpJ6ugz3cmmjb8fl",
+    "url3": ""
+  },
+  {
+    "id": "11-19-2024-publishers",
+    "date": "November 19, 2024",
+    "date_parsed": "2024-11-19",
+    "public": 1,
+    "type": "publishers",
+    "description": "The publishers Eksmo and AST, along with the printing house Pareto-Print, were each fined 4 million rubles (approximately $50,000) for “disseminating pornographic content involving minors” <em>Legacy</em>, a novel by Vladimir Sorokin. Earlier that year, <em>Legacy</em> had been <a href = \"#04-22-2024-books\">withdrawn from the market</a> by its publisher.",
+    "location": "Moscow",
+    "source": "url",
+    "url1": "https://www.kommersant.ru/doc/7312091 ",
     "url2": "",
     "url3": ""
   },
