@@ -1,5 +1,31 @@
 [
   {
+    "id": "05-29-2025-books",
+    "date": "May 29, 2025",
+    "date_parsed": "2025-05-29",
+    "public": 1,
+    "type": "books",
+    "description": "Samokat, an independent publisher focusing on children’s literature, has circulated a list of 23 titles that must be returned “in accordance with current legislature.” The list includes books on feminism and those featuring LGBTQ+ characters.",
+    "location": "",
+    "source": "url",
+    "url1": "https://t.me/paperpaper_ru/58748",
+    "url2": "",
+    "url3": ""
+  },
+  {
+    "id": "05-27-2025-books",
+    "date": "May 27, 2025",
+    "date_parsed": "2025-05-27",
+    "public": 1,
+    "type": "books",
+    "description": "A list of 37 books has been distributed to bookstores, which are required to either return or destroy the listed titles. The list, for example, includes <em>Žižek's Jokes</em> by Slavoj Žižek.",
+    "location": "",
+    "source": "url",
+    "url1": "https://t.me/bbcrussian/80816",
+    "url2": "",
+    "url3": ""
+  },
+  {
     "id": "05-26-2025-booksellers",
     "date": "May 26, 2025",
     "date_parsed": "2025-05-26",
