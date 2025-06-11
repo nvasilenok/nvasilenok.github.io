@@ -234,6 +234,19 @@
     "url3": ""
   },
   {
+    "id": "08-31-2024-books",
+    "date": "August 31, 2024",
+    "date_parsed": "2024-08-31",
+    "public": 1,
+    "type": "books",
+    "description": "Roskomnadzor, the Russian internet censorship agency, requested that Freedom Letters, an independent exile publisher, remove three works from their website: <em>Mouse</em> by Ivan Filippov, a novel set in a post-apocalyptic Moscow; <em>Springfield</em> by Sergey Davydov, a novel about a queer relationship in provincial Russia; and <em>Not the Last Words</em>, a collection of final courtroom speeches by Russian political prisoners.",
+    "location": "",
+    "source": "url",
+    "url1": "https://novayagazeta.eu/articles/2024/08/31/roskomnadzor-potreboval-ot-izdatelstva-freedom-letters-udalit-s-saita-sbornik-poslednikh-rechei-politzakliuchennykh-neposlednie-slova-news",
+    "url2": "https://novayagazeta.eu/articles/2024/08/30/roskomnadzor-potreboval-udalit-s-saita-freedom-letters-kvir-roman-springfild-news",
+    "url3": ""
+  },
+  {
     "id": "04-25-2024-books",
     "date": "April 25, 2024",
     "date_parsed": "2024-04-25",
