@@ -172,8 +172,6 @@ div {
 
 #preview-map {
 	width: 25%;
-	display: block;
-  margin: 0 auto;
   margin-bottom: 2%;
 }
 
@@ -273,8 +271,6 @@ div.footer {
 
   #preview-map {
 		width: 40%;
-		display: block;
-  	margin: 0 auto;
   	margin-bottom: 2%;
 	}
 
