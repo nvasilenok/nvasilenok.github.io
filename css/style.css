@@ -1,90 +1,95 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
-body, h1, h2, h3, h4 {
+h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	color: #212121;
-	font-weight: lighter;
+  font-family: "Noto Sans", sans-serif;
+  color: #212121;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-	color: white;
+	color: black;
 	font-size: 400%;
-	font-weight:lighter;
+	font-weight: 150;
 	text-align: center;
-	/* upper cases */
-	/* font-variant: small-caps; */
+}
+
+#page-title h1 {
+	font-family: "Cormorant Garamond", sans-serif;
+	padding-top: 75px;
+	padding-bottom: 20px;
+  color: #212121;
+  margin: 0px 0;
 }
 
 h2 {
-	color: gray;
-	font-size: 175%;
-	text-align: center;
-	font-weight: lighter;
-	margin-top: 1.5%;
-	margin-bottom: 2%;
-	/* upper cases */
-	/* font-variant: small-caps; */
+	font-family: "Cormorant Garamond", serif;
+	font-size: 190%;
+	text-align: left;
+	color: #7a7a7a;
+	font-weight: 300;
+	margin-bottom: 1%;
+	padding-top: 2.5%;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dedcdc;
+}
+
+h3, h4 {
+	font-size: 100%;
+	text-align: left;
+	color: #212121;
+	font-weight: bolder;
+	margin-bottom: 1.25%;
 }
 
 h3 {
-	font-size: 150%;
-	text-align: left;
-	color: gray;
+	margin-top: 1.5%;
+}
+
+span.h3, span.h4 {
 	font-weight: lighter;
-	margin-top: 2%;
-	margin-bottom: 1.5%;
-}
-
-h4 {
-	font-size: 110%;
-	text-align: left;
-	color: #212121;
-	margin-top: 3%;
-	margin-bottom: 0.5%;
-}
-
-span.h4 {
-	font-weight: lighter;
-}
-
-nav {
-	font-family: Courier;
-	font-size: 110%;
-	position: fixed;
- 	top: 0;
-  width: 100%;
-  background-color: #212121;
 }
 
 a {
+	text-decoration: underline;
+  text-decoration-thickness: 1.225px;
+  text-underline-offset: 2px;
 	font-size: 100%;
-	color: #3b441d;
+	color: #383522;
 }
 
 a:hover {
-  color: #7b6752;
+  color: #6e6857;
   text-decoration: none;
 }
 
-nav a {
-	display: inline-block;
-	float: left;
-	font-size: 110%;
-  	color: white;
-  	text-align: center;
-  	padding: 10px 16px;
-  	text-decoration: none;
-
+nav {
+	position: fixed;
+  font-size: 110%;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 200;
+  width: 100%;
+  background-color: white;
 }
 
-/* changes color */
+nav a {
+  display: inline-block;
+  padding: 10px 18px;
+  color: black;
+  text-decoration: none;
+}
+
 nav a:hover {
-  background-color: #111;
-  color: white;
+  font-weight: 350;
+  color: black;
 }
 
 #lan {
@@ -93,9 +98,8 @@ nav a:hover {
 }
 
 #current {
-	background-color: #64563c;
+  font-weight: 350;
 }
-
 
 .email {
 	text-align: center;
@@ -107,38 +111,41 @@ div.email {
 }
 
 .icons {
-	color: #3b441d;
+	color: #383522;
 	text-align: center;
-	text-decoration: none;
-}
+	text-decoration: none;}
 
 
 a.icons:hover {
   color: #7b6752;
 }
 
-#header {
-	background: url("../images/bg-schroetter.jpg");
-	background-size: cover;
-}
-
-#header h1 {
-	margin: 0;
-	padding: 95px 0px;
-	text-shadow: 0px -3px 20px #212121, 0px 7px 15px #64563c;
-}
-
-#main-content, footer {
-	width: 55%;
+#main-content {
+	width: 70%;
 	margin: 0 auto;
 	padding: 10px 0px;
+	font-size: 110%;
+	font-weight: 175;
+	flex: 1;
 }
 
-div {
-	/* border: solid 1px; */
+footer {
+	width: 70%;
+	margin: 0 auto;
+	padding: 10px 0px;
+	border-top: 1px solid #dedcdc;
+	font-size: 85%;
+	font-weight: 250;
+	clear: both;
+	margin-bottom: 2%;
+	margin-top: 1%;
+}
+
+div.footer {
+	margin-top: 3px;
 	display: block;
+	text-align: center;
 }
-
 
 #subheader {
 	border-bottom: 1px solid #dedcdc;
@@ -152,18 +159,17 @@ div {
 	margin-bottom: 20px;
 }
 
+#left-col, #right-col {
+  display: table-cell;
+  vertical-align: top;
+}
+
 #left-col {
-	display: table-cell;
-	vertical-align: top;
-	width: 25%;
-	/* display: table-cell; */
+	width: 23%;
 }
 
 #right-col {
-	display: table-cell;
-	vertical-align: top;
-	width: 60%;
-	/* display: table-cell; */
+	width: 67%;
 }
 
 #photo {
@@ -176,7 +182,6 @@ div {
 }
 
 p {
-	font-size: 105%;
 	line-height: 120%;
 	text-align: justify;
 	margin-top: 0;
@@ -187,19 +192,6 @@ p {
 #quote {
 	width: 70%;
 	margin-left: 150px;
-}
-
-footer {
-	border-top: 1px solid #dedcdc;
-	font-size: 80%;
-	clear: both;
-	margin-bottom: 2%;
-}
-
-div.footer {
-	margin-top: 3px;
-	display: block;
-	text-align: center;
 }
 
 /* small screens */
@@ -240,10 +232,6 @@ div.footer {
 		margin-top: 0;
 		margin-bottom: 15px;
 		vertical-align: top;
-	}
-
-	nav {
-		font-size: 97%;
 	}
 
 	#main-content, footer {
