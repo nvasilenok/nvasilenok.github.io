@@ -194,6 +194,48 @@ p {
 	margin-left: 150px;
 }
 
+#toggle {
+    display: none;
+  }
+
+  label[for="toggle"] {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 100%;
+    user-select: none;
+    color: #383522;
+  }
+
+  /* Space between text and caret */
+  label[for="toggle"] i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotate caret when toggled */
+  #toggle:checked + label i {
+    transform: rotate(180deg);
+  }
+
+  /* Hide image by default */
+  #load, #caption {
+    display: none;
+    align-items: center;
+    margin: 12px auto 0 auto;
+    max-width: 55%;
+    height: auto;
+    font-size: 80%;
+  }
+
+  /* Show image when toggled */
+  #toggle:checked + label + #load,
+	#toggle:checked + label + #load + #caption {
+  display: block;
+}
+
+
+
 /* small screens */
 
 @media (max-width: 800px) {
