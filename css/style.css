@@ -194,11 +194,12 @@ p {
 	margin-left: 150px;
 }
 
-#toggle {
+#toggle-communes, #toggle-rg {
     display: none;
   }
 
-  label[for="toggle"] {
+  label[for="toggle-communes"],
+  label[for="toggle-rg"] {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -207,34 +208,41 @@ p {
     color: #383522;
   }
 
-  /* Space between text and caret */
-  label[for="toggle"] i {
+  label[for="toggle-communes"] i,
+  label[for="toggle-rg"] i {
     margin-right: 10px;
     transition: transform 0.3s ease;
   }
 
   /* Rotate caret when toggled */
-  #toggle:checked + label i {
+  #toggle-communes:checked + label[for="toggle-communes"] i {
+    transform: rotate(180deg);
+  }
+  #toggle-rg:checked + label[for="toggle-rg"] i {
     transform: rotate(180deg);
   }
 
-  /* Hide image by default */
-  #load, #caption {
+  #load-communes,
+  #caption-communes,
+  #load-rg,
+  #caption-rg {
     display: none;
     align-items: center;
-    margin: 12px auto 0 auto;
-    max-width: 55%;
+    margin: 12px auto 5px auto;
+    max-width: 60%;
     height: auto;
     font-size: 80%;
   }
 
-  /* Show image when toggled */
-  #toggle:checked + label + #load,
-	#toggle:checked + label + #load + #caption {
-  display: block;
-}
+  #toggle-communes:checked + label[for="toggle-communes"] + #load-communes,
+  #toggle-communes:checked + label[for="toggle-communes"] + #load-communes + #caption-communes {
+    display: block;
+  }
 
-
+  #toggle-rg:checked + label[for="toggle-rg"] + #load-rg,
+  #toggle-rg:checked + label[for="toggle-rg"] + #load-rg + #caption-rg {
+    display: block;
+  }
 
 /* small screens */
 
