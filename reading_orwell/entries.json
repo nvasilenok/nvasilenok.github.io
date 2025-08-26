@@ -1,5 +1,18 @@
 [
   {
+    "id": "07-30-2025-books",
+    "date": "July 30, 2025",
+    "date_parsed": "2025-07-30",
+    "public": 1,
+    "type": "books",
+    "description": "Alexei Navalny's memoir <em>Patriot</em> was banned as extremist literature.",
+    "location": "",
+    "source": "url",
+    "url1": "https://minjust.gov.ru/ru/extremist-materials",
+    "url2": "https://www.rbc.ru/politics/30/07/2025/688a45789a79475edb40f422",
+    "url3": ""
+  },
+  {
     "id": "07-18-2025-booksellers",
     "date": "July 18, 2025",
     "date_parsed": "2025-07-18",
