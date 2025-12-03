@@ -1,5 +1,44 @@
 [
   {
+    "id": "10-02-2025-publishers",
+    "date": "October 2, 2025",
+    "date_parsed": "2025-10-02",
+    "public": 1,
+    "type": "publishers",
+    "description": "Ad Marginem Press, an independent publishing house that focuses on translated non-fiction works in philosophy, anthropology, and cultural theory was fined 800,000 rubles (around $10,000) for publishing and selling the Russian translation of Olivia Laing’s <em>Everybody: A Book about Freedom</em>, which allegedly contains “propaganda of non-traditional sexual relations.” The book has been withdrawn from the market.",
+    "location": "",
+    "source": "url",
+    "url1": "https://t.me/endoflaw/1414",
+    "url2": "",
+    "url3": ""
+  },
+  {
+    "id": "09-05-2025-books",
+    "date": "September 5, 2025",
+    "date_parsed": "2025-09-05",
+    "public": 1,
+    "type": "publishers",
+    "description": "The <em>Papercuts</em> newsletter, run by the StraightForward project, reported that Russia’s largest publisher has been using the Chinese-developed Qwen AI to review books intended for publication since August 5, identifying content at risk of violating Russian law. Such content has been described as including “promotion of non-traditional sexual relationships, transgenderism and gender change, narcotic and psychotropic substances, the child-free lifestyle, cruelty and violence, pedophilia, incitement to suicide, pornographic materials, and extremism.” According to Dozhd (Rain) TV, that publisher is Eksmo.",
+    "location": "",
+    "source": "url",
+    "url1": "https://sfpapercuts.substack.com/p/chinese-democracy",
+    "url2": "https://t.me/tvrain/93783",
+    "url3": ""
+  },
+  {
+    "id": "08-22-2025-scholarship",
+    "date": "August 22, 2025",
+    "date_parsed": "2025-08-22",
+    "public": 1,
+    "type": "scholarship",
+    "description": "The Tamizdat Project, a nonprofit organization and a scholarship initiative dedicated to documenting and studying literary censorship in the Soviet Union and contemporary Russia, was declared a foreign agent by the Ministry of Justice.",
+    "location": "",
+    "source": "url",
+    "url1": "https://minjust.gov.ru/ru/events/50853/",
+    "url2": "",
+    "url3": ""
+  },
+  {
     "id": "07-30-2025-books",
     "date": "July 30, 2025",
     "date_parsed": "2025-07-30",
