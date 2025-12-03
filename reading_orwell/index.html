@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="logo.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reading Orwell in Moscow</title>
@@ -101,97 +102,147 @@
         });
       }
 
+    function monthName(dateObj) {
+      return dateObj.toLocaleString('en-US', { month: 'long' });
+    }
+
     function displayEntries(category) {
-      const container = document.getElementById('entries');
-      container.innerHTML = '';
-    
-      const filtered = category === 'full timeline'
-        ? entries
-        : entries.filter(entry => entry.type === category);
-    
-      let currentYear = '';
-    
-      filtered.forEach(entry => {
-        const entryYear = new Date(entry.date_parsed).getFullYear().toString();
-    
-        // Insert a year header if we haven't already for this group
-        if (entryYear !== currentYear) {
-          currentYear = entryYear;
-          const yearHeader = document.createElement('div');
-          yearHeader.className = 'year-header';
-          yearHeader.textContent = currentYear;
-          container.appendChild(yearHeader);
-        }
-    
-        const entryDiv = document.createElement('div');
-        entryDiv.className = 'entry';
-        entryDiv.id = entry.id;
-    
-        if (currentCategory === 'full timeline') {
-          const typeElem = document.createElement('div');
-          typeElem.classList.add('entry-type');
-          typeElem.textContent = entry.type;
-          entryDiv.appendChild(typeElem);
-        }
-    
-        const dateElem = document.createElement('div');
-        dateElem.className = 'entry-date';
-        dateElem.textContent = entry.date;
-    
-        const descElem = document.createElement('p');
-        descElem.innerHTML = entry.description;
-    
-        entryDiv.appendChild(dateElem);
-        entryDiv.appendChild(descElem);
-    
-        // Source logic
-        if (entry.source && entry.source !== '') {
-          const sourceContainer = document.createElement('div');
-          sourceContainer.classList.add('entry-source');
-    
-          if (entry.source === 'url') {
-            ['url1', 'url2', 'url3'].forEach((key, i) => {
-              if (entry[key] && entry[key].trim() !== '') {
-                const link = document.createElement('a');
-                link.href = entry[key];
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                link.textContent = '[source]';
-                link.classList.add('source-link');
-                sourceContainer.appendChild(link);
-    
-                if (i < 2 && entry[key + 1] && entry[key + 1].trim() !== '') {
-                  const spacer = document.createTextNode(' ');
-                  sourceContainer.appendChild(spacer);
-                }
-              }
-            });
-          } else {
-            sourceContainer.textContent = entry.source;
-          }
-    
-          entryDiv.appendChild(sourceContainer);
-        }
-    
-        if (entry.location && entry.location.trim() !== '') {
-          const locationElem = document.createElement('div');
-          locationElem.classList.add('entry-location');
+  const container = document.getElementById('entries');
+  container.innerHTML = '';
 
-          const icon = document.createElement('i');
-          icon.className = 'fa fa-location-arrow';
-          icon.setAttribute('aria-hidden', 'true');
+  const filtered = category === 'full timeline'
+    ? entries
+    : entries.filter(entry => entry.type === category);
 
-          locationElem.appendChild(icon);
-          locationElem.appendChild(document.createTextNode(' ' + entry.location));
+  // --- GROUP ENTRIES BY YEAR ---
+  const byYear = {};
+  filtered.forEach(entry => {
+    const d = new Date(entry.date_parsed);
+    const year = d.getFullYear();
+    if (!byYear[year]) byYear[year] = [];
+    byYear[year].push(entry);
+  });
 
-          entryDiv.appendChild(locationElem);
-        }
-        container.appendChild(entryDiv);
+  const sortedYears = Object.keys(byYear).sort((a, b) => b - a);
+
+  sortedYears.forEach(year => {
+    const yearEntries = byYear[year];
+
+    // YEAR HEADER
+    const yearHeader = document.createElement('div');
+    yearHeader.className = 'year-header';
+    yearHeader.textContent = year;
+    container.appendChild(yearHeader);
+
+    // If ≥20 entries → group by month
+    const shouldGroupByMonth = yearEntries.length >= 20;
+
+    if (shouldGroupByMonth) {
+      // --- GROUP YEAR ENTRIES BY MONTH ---
+      const byMonth = {};
+      yearEntries.forEach(entry => {
+        const d = new Date(entry.date_parsed);
+        const month = d.getMonth(); // 0–11
+        if (!byMonth[month]) byMonth[month] = [];
+        byMonth[month].push(entry);
       });
+
+      const sortedMonths = Object.keys(byMonth)
+        .map(m => parseInt(m))
+        .sort((a, b) => b - a);
+
+      sortedMonths.forEach(month => {
+        // MONTH HEADER
+        const monthHeader = document.createElement('div');
+        monthHeader.className = 'month-header';
+        monthHeader.textContent = monthName(new Date(year, month, 1));
+        container.appendChild(monthHeader);
+
+        byMonth[month].forEach(entry => {
+          container.appendChild(buildEntry(entry));
+        });
+      });
+
+    } else {
+      // Otherwise → flat entries under the year
+      yearEntries.forEach(entry => {
+        container.appendChild(buildEntry(entry));
+      });
+    }
+  });
+}
+
+
+
+// Helper for building an entry DOM element
+function buildEntry(entry) {
+  const entryDiv = document.createElement('div');
+  entryDiv.className = 'entry';
+  entryDiv.id = entry.id;
+
+  if (currentCategory === 'full timeline') {
+    const typeElem = document.createElement('div');
+    typeElem.classList.add('entry-type');
+    typeElem.textContent = entry.type;
+    entryDiv.appendChild(typeElem);
+  }
+
+  const dateElem = document.createElement('div');
+  dateElem.className = 'entry-date';
+  dateElem.textContent = entry.date;
+
+  const descElem = document.createElement('p');
+  descElem.innerHTML = entry.description;
+
+  entryDiv.appendChild(dateElem);
+  entryDiv.appendChild(descElem);
+
+  // SOURCE
+  if (entry.source && entry.source !== '') {
+    const sourceContainer = document.createElement('div');
+    sourceContainer.classList.add('entry-source');
+
+    if (entry.source === 'url') {
+      ['url1', 'url2', 'url3'].forEach((key, i) => {
+        if (entry[key] && entry[key].trim() !== '') {
+          const link = document.createElement('a');
+          link.href = entry[key];
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = '[source]';
+          link.classList.add('source-link');
+          sourceContainer.appendChild(link);
+
+          if (i < 2 && entry[key + 1] && entry[key + 1].trim() !== '') {
+            sourceContainer.appendChild(document.createTextNode(' '));
+          }
+        }
+      });
+    } else {
+      sourceContainer.textContent = entry.source;
+    }
+
+    entryDiv.appendChild(sourceContainer);
+  }
+
+  if (entry.location && entry.location.trim() !== '') {
+    const locationElem = document.createElement('div');
+    locationElem.classList.add('entry-location');
+
+    const icon = document.createElement('i');
+    icon.className = 'fa fa-location-arrow';
+    icon.setAttribute('aria-hidden', 'true');
+
+    locationElem.appendChild(icon);
+    locationElem.appendChild(document.createTextNode(' ' + entry.location));
+    entryDiv.appendChild(locationElem);
+  }
+
+  return entryDiv;
 }
   </script>
 
-<footer class="page-footer">© 2025. Natalia Vasilenok.</footer>
+<footer class="page-footer">© 2025. </footer>
 </body>
 </html>
 

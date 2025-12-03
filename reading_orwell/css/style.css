@@ -143,6 +143,17 @@ a:hover {
   width: 100%;
 }
 
+.month-header {
+  font-size: 125%;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  color: #A40101; 
+  margin: 0rem 0 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+
 .entry-location {
   position: absolute;
   bottom: 0.5rem;
