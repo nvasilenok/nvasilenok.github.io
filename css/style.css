@@ -189,17 +189,25 @@ p {
 	vertical-align: top;
 }
 
+div.talks {
+	font-size: 85%;
+	width: 85%;
+}
+
 #quote {
 	width: 70%;
 	margin-left: 150px;
+	text-align: justify;
 }
 
-#toggle-communes, #toggle-rg {
+#toggle-communes, #toggle-rg, #toggle-books, #toggle-parties {
     display: none;
   }
 
   label[for="toggle-communes"],
-  label[for="toggle-rg"] {
+  label[for="toggle-rg"],
+  label[for="toggle-books"],
+  label[for="toggle-parties"] {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -209,7 +217,9 @@ p {
   }
 
   label[for="toggle-communes"] i,
-  label[for="toggle-rg"] i {
+  label[for="toggle-rg"] i,
+  label[for="toggle-books"] i,
+  label[for="toggle-parties"] i {
     margin-right: 10px;
     transition: transform 0.3s ease;
   }
@@ -221,11 +231,21 @@ p {
   #toggle-rg:checked + label[for="toggle-rg"] i {
     transform: rotate(180deg);
   }
+  #toggle-books:checked + label[for="toggle-books"] i {
+    transform: rotate(180deg);
+  }
+  #toggle-parties:checked + label[for="toggle-parties"] i {
+    transform: rotate(180deg);
+  }
 
   #load-communes,
   #caption-communes,
   #load-rg,
-  #caption-rg {
+  #caption-rg,
+  #load-books,
+  #caption-books,
+  #load-parties,
+  #caption-parties {
     display: none;
     align-items: center;
     margin: 12px auto 5px auto;
@@ -241,6 +261,16 @@ p {
 
   #toggle-rg:checked + label[for="toggle-rg"] + #load-rg,
   #toggle-rg:checked + label[for="toggle-rg"] + #load-rg + #caption-rg {
+    display: block;
+  }
+
+  #toggle-books:checked + label[for="toggle-books"] + #load-books,
+  #toggle-books:checked + label[for="toggle-books"] + #load-books + #caption-books {
+    display: block;
+  }
+
+  #toggle-parties:checked + label[for="toggle-parties"] + #load-parties,
+  #toggle-parties:checked + label[for="toggle-parties"] + #load-parties + #caption-parties {
     display: block;
   }
 
