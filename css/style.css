@@ -73,9 +73,9 @@ a:hover {
 
 nav {
 	position: fixed;
-  font-size: 110%;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 200;
+  font-size: 130%;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 110;
   width: 100%;
   background-color: white;
 }
@@ -88,7 +88,7 @@ nav a {
 }
 
 nav a:hover {
-  font-weight: 350;
+  font-weight: 225;
   color: black;
 }
 
@@ -98,7 +98,7 @@ nav a:hover {
 }
 
 #current {
-  font-weight: 350;
+  font-weight: 225;
 }
 
 .email {
